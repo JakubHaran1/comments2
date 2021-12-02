@@ -1,0 +1,369 @@
+:root {
+    /* Primary */
+    --Moderate-violet: hsl(263, 55%, 52%);
+
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    /* Secondary */
+    --Light-gray: hsl(0, 0%, 61%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Light-grayish-blue);
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.6fr 0.3fr 0.3fr 0.5fr 0.6fr;
+    width: 90%;
+    grid-template-areas:
+        "comment1"
+        "comment2"
+        "comment3"
+        "comment4"
+        "comment5"
+    ;
+    gap: 3vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-align: left;
+    margin: 5vh auto;
+}
+
+div {
+    border-radius: 3%;
+}
+
+.comment1 {
+    grid-area: comment1;
+    background-color: var(--Moderate-violet);
+}
+
+.head {
+    display: flex;
+    margin: 2.5vh 2vh 2vh;
+    font-size: 2vh;
+    color: var(--Light-grayish-blue);
+}
+
+svg {
+    position: absolute;
+    left: 60%;
+    opacity: 50%;
+}
+
+img {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 2vh;
+    border: 0.5px solid white;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 2.9vh;
+    margin: 0 0 2vh 4vh;
+    width: 80%;
+    line-height: 115%;
+    font-weight: 500;
+    color: var(--White);
+}
+
+.description {
+    width: 82%;
+    margin: 0 2.5vh 3.5vh 4vh;
+    color: var(--Light-grayish-blue);
+    opacity: 70%;
+    line-height: 115%;
+}
+
+.id {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.comment2 {
+    grid-area: comment2;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.comment3 {
+    grid-area: comment3;
+    background-color: var(--White);
+}
+
+.comment3 .head {
+    color: var(--Light-gray);
+}
+
+.comment3 h1 {
+    width: 65%;
+    color: var(--Very-dark-grayish-blue);
+}
+
+.comment3 .description {
+    color: var(--Light-gray);
+    opacity: 70%;
+    width: 75%;
+    margin: 0 2.5vh 2vh 4vh;
+}
+
+.comment4 {
+    grid-area: comment4;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.comment4 .description {
+    margin: 0 2.5vh 2vh 4vh;
+}
+
+.comment5 {
+    grid-area: comment5;
+    background-color: var(--White);
+}
+
+.comment5 .head {
+    color: var(--Light-gray);
+}
+
+.comment5 h1 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.comment5 .description {
+    width: 80%;
+    color: var(--Light-gray);
+    opacity: 70%;
+    margin: 0 2.5vh 2vh 4vh;
+}
+
+@media(min-width:800px) and (orientation:portrait) {
+    h1 {
+        margin: 0 0 2vh 4vh;
+        width: 85%;
+    }
+
+    .comment3 h1 {
+        width: 80%;
+        color: var(--Very-dark-grayish-blue);
+    }
+
+    .description {
+        font-size: 1.8vh;
+    }
+
+    svg {
+        left: 80%;
+    }
+}
+
+@media (orientation:landscape) {
+    .head {
+        font-size: 5vh;
+        color: var(--Light-grayish-blue);
+        margin-top: 5vh;
+        margin-left: 10vh;
+    }
+
+    svg {
+        left: 75%;
+    }
+
+    img {
+        width: 11vh;
+        height: 11vh;
+    }
+
+    h1 {
+        margin: 0 0 2vh 10vh;
+        width: 85%;
+        font-size: 6.5vh;
+    }
+
+    .description {
+        width: 82%;
+        margin: 0 2.5vh 5vh 10vh;
+        color: var(--Light-grayish-blue);
+        opacity: 70%;
+        line-height: 115%;
+    }
+
+    .comment3 .description {
+        margin: 0 2.5vh 5vh 10vh;
+    }
+
+    .comment4 .description {
+        margin: 0 2.5vh 5vh 10vh;
+    }
+
+    .comment5 .description {
+        margin: 0 2.5vh 10vh 10vh;
+    }
+
+    .wrap {
+        gap: 5vh;
+    }
+}
+
+@media(min-width:1024px) {
+    .wrap {
+        grid-template-columns: 1fr 1.2fr 0.8fr 1fr;
+        grid-template-rows: 0.3fr 0.4fr;
+        width: 95%;
+        grid-template-areas:
+            "comment1 comment1 comment2 comment5"
+            "comment3 comment4 comment4 comment5"
+        ;
+        gap: 2vh;
+    }
+
+    .head {
+        font-size: 2vh;
+        color: var(--Light-grayish-blue);
+        margin-top: 3vh;
+        margin-left: 3vh;
+    }
+
+    svg {
+        position: absolute;
+        left: 40%;
+        opacity: 50%;
+    }
+
+    img {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    h1 {
+        margin: 0 0 2vh 3vh;
+        width: 85%;
+        font-size: 3vh;
+    }
+
+    .description {
+        width: 85%;
+        margin: 0 0vh 5vh 3vh;
+        font-size: 2vh;
+    }
+
+    .comment3 h1 {
+        font-size: 3vh;
+        width: 80%;
+    }
+
+    .comment3 .description {
+        margin: 0 2.5vh 1.5vh 3vh;
+        width: 85%;
+    }
+
+    .comment4 .description {
+        margin: 0 2.5vh 5vh 3vh;
+        width: 90%;
+    }
+
+    .comment5 .description {
+        margin: 0 2.5vh 10vh 3vh;
+    }
+}
+
+@media(min-width:1600px) {
+    .wrap {
+        width: 73%;
+        grid-template-columns: 0.8fr 1.4fr 0.9fr 1fr;
+        grid-template-rows: 0.3fr 0.3fr;
+    }
+
+    .comment3 h1 {
+        font-size: 3vh;
+        width: 85%;
+    }
+
+    svg {
+        position: absolute;
+        left: 45%;
+        opacity: 50%;
+    }
+
+}
+
+
+/* @media only screen and (max-width:1500px) {
+    .wrap {
+        width: 69%;
+    }
+
+    h1 {
+        margin: 0 0 3vh 4vh;
+        width: 75%;
+
+
+    }
+
+    .description {
+        width: 88%;
+    }
+} */
+
+/* @media only screen and (max-width:1395px) {
+    .wrap {
+        width: 79%;
+    }
+
+    h1 {
+        margin: 0 0 3vh 4vh;
+        width: 85%;
+
+
+    }
+
+    .description {
+        width: 88%;
+    }
+} */
+
+/* @media screen and (max-width:520px) {
+    .wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 2fr 1fr 1fr 1.5fr 1.8fr;
+        width: 65%;
+        
+
+        grid-template-areas:
+            "comment1 comment1 comment2 comment5"
+            "comment3 comment4 comment4 comment5"
+        ;
+        gap: 2vh;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-align: left;
+
+
+    }
+} */
+
+
+/* .attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
